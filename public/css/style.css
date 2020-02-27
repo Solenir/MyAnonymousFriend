@@ -2577,6 +2577,10 @@ h3 {
   z-index: 0;
 }
 
+#entrar{
+  background-color = #8b2ceb;
+}
+
 @media (max-width: 767px) {
   /* line 13, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/_bradcam.scss */
   .bradcam_area {
