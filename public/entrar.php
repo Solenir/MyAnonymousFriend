@@ -1,3 +1,13 @@
+<?php
+$login = (isset($_COOKIE['Login'])) ? ($_COOKIE['Login']) : '';
+$senha = (isset($_COOKIE['Senha'])) ? ($_COOKIE['Senha']) : '';
+$lembrete = (isset($_COOKIE['Lembrete'])) ?($_COOKIE['Lembrete']) : '';
+$checked = ($lembrete == 'SIM') ? 'checked' : '';
+require_once("topoPreLogin.php");
+
+?>
+
+
 <!doctype html>
 <html class="no-js" lang="zxx">
 
@@ -25,6 +35,47 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+
+    <script>
+  	$(document).ready(function() { // Espera o DOM carregar
+      $('#loginForm').submit(function(ev) {
+          ev.preventDefault(); // Para a subimissão do formulário
+          // Captura inputs do formulário
+
+
+          var inputLogin = $(this).find('input[name="login"]').val();
+          var inputSenha = $(this).find('input[name="senha"]').val();
+          var inputCheck = $(this).find('input[name="lembrar"]').val();
+
+          // Monta os parâmentos para a requisição
+          var request = { botaoEntrar: "botaoEntrar", login: inputLogin, senha: inputSenha, lembrete: inputCheck};
+
+          $.ajax({ // Faz requisição no servidor
+            url : "api/v1/rotas.php",
+            type: "post",
+            data : request,
+			/* Esta callback é chamada se o login ocorrer com sucesso */
+            success: function(data, textStatus, jqXHR) {
+
+             window.location.href = "index.php";
+
+            },
+			/* Está callback é chamada se ocorrer falha de login */
+            error: function (jqXHR, textStatus, errorThrown) {
+                if(jqXHR.status == 401)
+                    $('.alerta').html('<div class="alert alert-danger" id="erroLogin"> <strong> Atenção!</strong> Login e/ou senha incorretos.</div>');
+
+                else
+                    if(jqXHR.status == 400) {
+                        $('.alerta').html('<div class="alert alert-danger" id="erroLogin"> <strong> Atenção!</strong> Preencha os campos obrigatórios.</div>');
+                    }
+            }
+          });
+      });
+  	});
+    </script>
+
+
 </head>
 
 <body>
@@ -32,59 +83,6 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <header>
-            <div class="header-area ">
-                <div id="sticky-header" class="main-header-area">
-                    <div class="container-fluid">
-                        <div class="row align-items-center">
-                            <div class="col-xl-3 col-lg-2">
-                                <div class="logo">
-                                    <a style="color: white;" href="index.html" class="active">
-                                        My Anonymous Friend <!-- <img src="img/logo.png" alt=""> -->
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-7">
-                                <div class="main-menu  d-none d-lg-block">
-                                    <nav>
-                                        <ul id="navigation">
-                                            <li><a class="active" href="index.html">Início</a></li>
-                                            <li><a href="about.html">Sobre</a></li>
-                                            <li><a href="#">Blogs Relacionados <i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                    <li><a href="https://www.cvv.org.br/">CVV</a></li>
-                <li><a href="https://psicoterapia.psc.br/blog/">Artur Scarpato</a></li>
-                                                    <li><a href="https://saude.abril.com.br/tudo-sobre/ansiedade/">Tudo sobre ansiedade</a></li>
-                <li><a href="https://www.vittude.com/blog/">Vittude</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="#">Parceiros<i class="ti-angle-down"></i></a>
-                                                <ul class="submenu">
-                                                     <li><a href="portfolio.html">Sites</a></li>
-                                                     <li><a href="elements.html">Elementos</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="contact.html">Contato</a></li>
-                                        </ul>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="col-xl-3 col-lg-3 d-none d-lg-block">
-                                <div class="Appointment">
-                                    <div class="book_btn d-none d-lg-block">
-                                        <a  href="#">Entrar</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </header>
         <!-- header-end -->
         <!-- header-end -->
     <!-- bradcam_area  -->
