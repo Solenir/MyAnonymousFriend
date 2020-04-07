@@ -15,13 +15,13 @@ class Conexao
     {
         # Informações sobre o banco de dados:
         $host = "localhost";
-        $nome = "BD_HomeService";
+        $nome = "DB_myanonymousfriend";
         $usuario = "root";
         $senha = "";
         $driver = "mysql";
         # Informações sobre o sistema:
-        $sistema_titulo = "Home Service";
-        $sistema_email = "homeservice@gmail.com";
+        $sistema_titulo = "My Anonymous Friend";
+        $sistema_email = "myanonymousfriend.uefs@gmail.com";
         try
         {
             # Atribui o objeto PDO à variável $db.

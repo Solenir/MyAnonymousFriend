@@ -6,7 +6,7 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.16)
-# Database: myanonymousfriend
+# Database: DB_myanonymousfriend
 # Generation Time: 2020-02-27 01:43:47 +0000
 # ************************************************************
 
@@ -18,7 +18,18 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+-- *****************************************************
+-- CRIACAO DO BANCO DE DADOS
+-- *****************************************************
+CREATE DATABASE DB_myanonymousfriend
+DEFAULT CHARACTER SET utf8
+DEFAULT COLLATE utf8_general_ci;
 
+-- *****************************************************
+-- CRIACAO DAS TABELAS
+-- *****************************************************
+
+USE DB_myanonymousfriend;
 
 # Dump of table chat
 # ------------------------------------------------------------
