@@ -25,6 +25,7 @@ require_once(__DIR__."/../../persistencia/UsuarioDAO.php");
 		 * @return bool identifica se o cadastrado foi efetuado com sucesso
 		 */
 		 public function cadastrar($nome, $login, $senha) {
+
 			 return  UsuarioDAO::getInstance()->inserirNovoUsuario( new Usuario($nome,$login,$senha));
 		 }
 

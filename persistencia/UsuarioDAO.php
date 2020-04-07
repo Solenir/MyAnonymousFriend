@@ -8,7 +8,6 @@ if(!isset($_SESSION)){
 }
 
 require_once ('Criptografia.php');
-//require_once ($_SERVER["DOCUMENT_ROOT"]."/HomeService-master/application/model/Usuario.php");
 require_once (__DIR__."/../application/model/Usuario.php");
 
 
@@ -31,6 +30,7 @@ class UsuarioDAO {
     $stmt = Conexao::getInstance()->prepare(CrudSql::getInstance()->verificarCadastro());
     $stmt->bindValue(1,$usuario->getLogin());
     $stmt->execute();
+    
     $linha = $stmt->fetch(PDO::FETCH_ASSOC);
     if ($linha > 0){
       return false;

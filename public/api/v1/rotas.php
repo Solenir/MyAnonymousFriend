@@ -16,8 +16,8 @@ if (isset($_POST['botaoCadastro'])){  // Checa se uma solicitação de cadastro 
 
 
 
-
-    if ($nome != '' && $login !='' && $senha !='' && $senha2 != ''  && ($senha == $senha2)) {  // Checa se os parâmetros do formulário foram setados
+   
+    if ($nome != '' && $login !='' && $senha !='' && $senha2 != ''  && $senha == $senha2) {  // Checa se os parâmetros do formulário foram setados
         if ((new ControladorUsuario())->cadastrar($nome, $login, $senha)) { // Checa se o cadastro ocorreu com sucesso
             $_SESSION['logado'] = true;
             header("HTTP/1.0 200 OK");

@@ -25,25 +25,26 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
 
-
-        <script>
+      <script>
 
             $(document).ready(function() { // Espera o DOM carregar
 
 
-                $('.cadastro').submit(function(ev) {
+                $('form#cadastro-form').submit(function(ev) {
                     ev.preventDefault(); // Para a subimissão do formulário
 
                     // Captura inputs do formulário
+
                     var inputNome = $(this).find('input[name="nome"]').val();
-                    var inputLogin = $(this).find('input[name="mail"]').val();
+                    var inputLogin = $(this).find('input[name="email"]').val();
                     var inputSenha1 = $(this).find('input[name="senha1"]').val();
                     var inputSenha2 = $(this).find('input[name="senha2"]').val();
-                    var checado = $('#marcado').is(':checked');
+
 
                     // Monta os parâmentos para a requisição
-                    var request = {botaoCadastro: "botaocadastro", nome: inputNome, login: inputLogin, senha: inputSenha1,senha2: inputSenha2, termos:checado}
+                    var request = {botaoCadastro: "botaocadastro", nome: inputNome, login: inputLogin, senha: inputSenha1,senha2: inputSenha2}
 
                     $.ajax({ // Faz requisição no servidor
 
@@ -53,21 +54,23 @@
 
                         success: function(data, textStatus, jqXHR) {
 
+                          $('.alerta').html(data);
 
-                            window.location.href = "index.php";
+                            //window.location.href = "index.php";
 
                         },
                         error: function (jqXHR, textStatus, errorThrown) {
 
                             if (jqXHR.status == 500){
-                                if (inputEmail == '') {
-                                    $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Já existe um usuário com este Login.</div>');
-                                }
-                                else
-                                    $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Login e/ou email já estão em uso.</div>');
+                              $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Já existe um usuário com este Login.</div>');
+
                             }
-                            if(jqXHR.status == 400)
-                                 $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Preencha todos os campos corretamente.</div>');
+                            else{
+                              if(jqXHR.status == 400)
+                                   $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Preencha todos os campos corretamente.</div>');
+
+
+                            }
 
 
                         }
@@ -76,6 +79,7 @@
                 });
             });
         </script>
+
 </head>
 
 <body>
@@ -175,7 +179,7 @@
 
 
                 <p id="obrigatorio">* Campos obrigatórios</p>
-                <input class="btn btn-lg btn-success btn-block cadastro"  name="cadastrar" type="submit" value="Cadastrar">
+                <input class="btn btn-lg btn-success btn-block cadastro"   name="cadastrar" type="submit" value="Cadastrar">
 
                 </fieldset>
                 </form>
@@ -235,6 +239,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
 
   <!-- JS here -->
+  <script src="js/jquery-3.1.1.min.js"></script>
+
   <script src="js/vendor/modernizr-3.5.0.min.js"></script>
   <script src="js/vendor/jquery-1.12.4.min.js"></script>
   <script src="js/popper.min.js"></script>
