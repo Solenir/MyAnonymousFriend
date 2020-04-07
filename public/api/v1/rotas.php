@@ -13,13 +13,12 @@ if (isset($_POST['botaoCadastro'])){  // Checa se uma solicitação de cadastro 
     $login   = (isset($_POST['login'])) ? $_POST['login'] : '';
     $senha  = (isset($_POST['senha'])) ? $_POST['senha'] : '';
     $senha2  = (isset($_POST['senha2'])) ? $_POST['senha2'] : '';
-    $termo  =  $_POST['termos'];
-    $email = $_POST['email'];
 
 
 
-    if ($nome != '' && $login !='' && $senha !='' && $senha2 != '' && $termo =='true' && ($senha == $senha2)) {  // Checa se os parâmetros do formulário foram setados
-        if ((new ControladorUsuario())->cadastrar($nome, $login, $email, $senha)) { // Checa se o cadastro ocorreu com sucesso
+
+    if ($nome != '' && $login !='' && $senha !='' && $senha2 != ''  && ($senha == $senha2)) {  // Checa se os parâmetros do formulário foram setados
+        if ((new ControladorUsuario())->cadastrar($nome, $login, $senha)) { // Checa se o cadastro ocorreu com sucesso
             $_SESSION['logado'] = true;
             header("HTTP/1.0 200 OK");
 

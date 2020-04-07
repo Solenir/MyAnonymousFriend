@@ -5,7 +5,7 @@
                 <div class="row align-items-center">
                     <div class="col-xl-3 col-lg-2">
                         <div class="logo">
-                            <a style="color: white;" href="index.html" class="active">
+                            <a style="color: white;" href="index.php" class="active">
                                 My Anonymous Friend <!-- <img src="img/logo.png" alt=""> -->
                             </a>
                         </div>
@@ -14,7 +14,7 @@
                         <div class="main-menu  d-none d-lg-block">
                             <nav>
                                 <ul id="navigation">
-                                    <li><a class="active" href="index.html">Início</a></li>
+                                    <li><a class="active" href="index.php">Início</a></li>
                                     <li><a href="about.html">Sobre</a></li>
                                     <li><a href="#">Blogs Relacionados <i class="ti-angle-down"></i></a>
                                         <ul class="submenu">
@@ -38,7 +38,7 @@
                     <div class="col-xl-3 col-lg-3 d-none d-lg-block">
                         <div class="Appointment">
                             <div class="book_btn d-none d-lg-block">
-                                <a  href="#">Entrar</a>
+                                <a  href="entrar.php">Entrar</a>
                             </div>
                         </div>
                     </div>

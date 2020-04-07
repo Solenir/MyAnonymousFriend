@@ -26,46 +26,56 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
 
-    <script>
-  	$(document).ready(function() { // Espera o DOM carregar
-      $('#loginForm').submit(function(ev) {
-          ev.preventDefault(); // Para a subimissão do formulário
-          // Captura inputs do formulário
+
+        <script>
+
+            $(document).ready(function() { // Espera o DOM carregar
 
 
-          var inputLogin = $(this).find('input[name="login"]').val();
-          var inputSenha = $(this).find('input[name="senha"]').val();
-          var inputCheck = $(this).find('input[name="lembrar"]').val();
+                $('.cadastro').submit(function(ev) {
+                    ev.preventDefault(); // Para a subimissão do formulário
 
-          // Monta os parâmentos para a requisição
-          var request = { botaoEntrar: "botaoEntrar", login: inputLogin, senha: inputSenha, lembrete: inputCheck};
+                    // Captura inputs do formulário
+                    var inputNome = $(this).find('input[name="nome"]').val();
+                    var inputLogin = $(this).find('input[name="mail"]').val();
+                    var inputSenha1 = $(this).find('input[name="senha1"]').val();
+                    var inputSenha2 = $(this).find('input[name="senha2"]').val();
+                    var checado = $('#marcado').is(':checked');
 
-          $.ajax({ // Faz requisição no servidor
-            url : "api/v1/rotas.php",
-            type: "post",
-            data : request,
-			/* Esta callback é chamada se o login ocorrer com sucesso */
-            success: function(data, textStatus, jqXHR) {
+                    // Monta os parâmentos para a requisição
+                    var request = {botaoCadastro: "botaocadastro", nome: inputNome, login: inputLogin, senha: inputSenha1,senha2: inputSenha2, termos:checado}
 
-             window.location.href = "index.php";
+                    $.ajax({ // Faz requisição no servidor
 
-            },
-			/* Está callback é chamada se ocorrer falha de login */
-            error: function (jqXHR, textStatus, errorThrown) {
-                if(jqXHR.status == 401)
-                    $('.alerta').html('<div class="alert alert-danger" id="erroLogin"> <strong> Atenção!</strong> Login e/ou senha incorretos.</div>');
+                        url : "api/v1/rotas.php",
+                        type: "post",
+                        data : request,
 
-                else
-                    if(jqXHR.status == 400) {
-                        $('.alerta').html('<div class="alert alert-danger" id="erroLogin"> <strong> Atenção!</strong> Preencha os campos obrigatórios.</div>');
-                    }
-            }
-          });
-      });
-  	});
-    </script>
+                        success: function(data, textStatus, jqXHR) {
 
 
+                            window.location.href = "index.php";
+
+                        },
+                        error: function (jqXHR, textStatus, errorThrown) {
+
+                            if (jqXHR.status == 500){
+                                if (inputEmail == '') {
+                                    $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Já existe um usuário com este Login.</div>');
+                                }
+                                else
+                                    $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Login e/ou email já estão em uso.</div>');
+                            }
+                            if(jqXHR.status == 400)
+                                 $('.alerta').html('<div class="alert alert-danger" id="erroCadastro"> <strong> Atenção!</strong> Preencha todos os campos corretamente.</div>');
+
+
+                        }
+                    });
+
+                });
+            });
+        </script>
 </head>
 
 <body>
@@ -107,68 +117,70 @@
             background: #fff;
             border: 1px solid #a0a0a0;
             padding: 10px;" class="panel-body">
-                <div class="panel-title">
-                    <h4 class="panel-title" id="entrarH4">Entrar</h4>
+               <div class="panel-title">
 
+                <h4 class="panel-title">Cadastro</h4>
                 </div>
                 <div class="panel-heading">
-
                 </div>
 
-                <form  method="post" role="form" id="loginForm" data-toggle="validator">
-                    <div class="alerta"></div>
-                    <fieldset>
+                <form  method="post" role="form" id="cadastro-form" data-toggle="validator">
+                    <div class="alerta">
 
-                        <div class="form-group ">
-                            <div class="input-group">
-                                <div class="input-group-addon">
-                                    <i class="" aria-hidden="true" ></i>
-                                </div>
-                                <input class="form-control" value="" id="login" name="login" type="text" placeholder="Seu login" data-error="Por favor, informe um login." required/>
-                            </div>
-                            <div class="help-block with-errors"></div>
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <div class="input-group">
-
-                                <div class="input-group-addon">
-                                    <i class="" aria-hidden="true"></i>
-                                </div>
-                                <input class="form-control"  name="senha" type="password" placeholder="Senha" data-error="Por favor, informe sua senha."required/>
-
-
-                            </div>
-                            <div class="help-block with-errors"></div>
-
-                        </div>
-
-
-
-                        <div class="checkbox">
-                            <label>
-                                <input name="lembrar" type="checkbox" value="SIM" <?=$checked?>Lembre-me
-                            </label>
-                            <a href="recuperarSenha.php" id="esqueceu">&nbsp;&nbsp;&nbsp;&nbsp;Esqueceu sua senha?</a>
-
-                        </div>
-
-                        <input class="btn btn-lg btn-success btn-block" id="entrar" name="entrar" type="submit" value="Entrar">
-                    </fieldset>
-                </form>
-                <hr/>
-                </br>
+                   </div>
+                <fieldset>
                 <div class="form-group">
-
                     <div class="input-group">
-                        <p>Não possui cadastro? <a href="cadastro.php">cadastre-se aqui!</a></p>
+                        <div class="input-group-addon">
+                        <i class="" aria-hidden="true"></i>
+                        </div>
+                        <input class="form-control"  name="nome" type="text" placeholder="*Seu nome"  required/>
                     </div>
                 </div>
 
 
+                <div class="form-group">
 
+                    <div class="input-group">
+
+                   <div class="input-group-addon">
+                    <i class="" aria-hidden="true"></i>
+                    </div>
+                    <input class="form-control" id="email" name="email" type="*Seu Login - Email" placeholder="Seu email para acessar a plataforma">
+
+                    </div>
+                    <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group senha">
+                    <div class="input-group-addon ">
+                    <i class="" aria-hidden="true"></i>
+                    </div>
+                        <input class="form-control" id="senha" name="senha1" type="password" placeholder="*Senha" data-minlength="6"  required/>
+                    </div>
+
+                    <span class="help-block"><small>Mínimo de seis (6) digitos</small></span>
+                </div>
+
+                <div class="form-group">
+                    <div class="input-group senha">
+                    <div class="input-group-addon ">
+                    <i class="" aria-hidden="true"></i>
+                    </div>
+                    <input class="form-control" id="senha" name="senha2" type="password" placeholder="*Confirme sua senha" data-match="#senha"
+                           data-match-error="Atenção! As senhas não estão iguais." data-error=" " required/>
+                    </div>
+                    <div class="help-block with-errors"></div>
+                </div>
+
+
+                <p id="obrigatorio">* Campos obrigatórios</p>
+                <input class="btn btn-lg btn-success btn-block cadastro"  name="cadastrar" type="submit" value="Cadastrar">
+
+                </fieldset>
+                </form>
+                <hr/>
+                </br>
             </div>
 
 
