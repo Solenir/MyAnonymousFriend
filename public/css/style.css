@@ -95,6 +95,16 @@ p {
   font-family: "Muli", sans-serif;
 }
 
+.panel-body{
+  margin-left: 120%;
+  width: 80%;
+  background: #fff;
+  border: 1px solid #73AD21;
+  padding: 10px;
+}
+
+
+
 /* line 68, ../../Arafath/CL/CL October/218 PORTFOLIO/HTML/scss/theme-default.scss */
 label {
   color: #7e7e7e;
