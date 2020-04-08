@@ -53,28 +53,6 @@
     </div>
     <!-- /bradcam_area  -->
 
-    <div class="video_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="video_wrap">
-                        <div class="thumb">
-                            <img src="img/video/video_bg.png" alt="">
-                            <div class="video_icon">
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=1Prw90PRiJE"> <i class="fa fa-play"></i> </a>
-                            </div>
-                        </div>
-                        <div class="video_text text-center">
-                            <p>Olá, Eu sou seu amigo anônimo. Sou um artista, adoro gatos e gostaria de conversar com você sobre várias coisas.<br>
-                                 <br>
-                                </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- about_me  -->
     <div class="about_me">
