@@ -1,0 +1,43 @@
+.box {
+	display: inline-block;
+	position: relative;
+}
+.balao {
+	width: 100%;
+	padding: 20px;
+	background: rgb(24, 74, 110);
+	display: block;
+	border-radius: 10px;
+}
+.balao2 {
+	display: block;
+	margin-bottom: 10px;
+}
+.balao3 {
+	display: block;
+}
+.triangulo-para-cima {
+	width: 0; 
+	height: 0; 
+	border-left: 0px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 25px solid rgb(24, 74, 110);
+	margin-left: 30px;
+}
+.aspa {
+	font-size: 200px;
+	line-height: 200px;
+	position: absolute;
+	right: 0px;
+	top: -20px;
+	z-index: 0;
+	color: rgb(21, 82, 125);
+	height: 100px;
+	overflow: hidden;
+}
+.frase {
+	z-index: 1;
+	color: #fff;
+	display: block;
+	position: relative;
+}
