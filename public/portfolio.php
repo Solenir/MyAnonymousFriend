@@ -33,11 +33,8 @@
         <![endif]-->
         <!-- header-start -->
         <?php
-        $login = (isset($_COOKIE['Login'])) ? ($_COOKIE['Login']) : '';
-        $senha = (isset($_COOKIE['Senha'])) ? ($_COOKIE['Senha']) : '';
-        $lembrete = (isset($_COOKIE['Lembrete'])) ?($_COOKIE['Lembrete']) : '';
-        $checked = ($lembrete == 'SIM') ? 'checked' : '';
-        require_once("topoPreLogin.php");
+
+        require_once("topoPosLogin.php");
 
         ?>
     <!-- bradcam_area  -->
@@ -61,12 +58,12 @@
                 <div class="col-xl-5 col-md-5">
                     <div class="single_Portfolio">
                         <div class="portfolio_thumb">
-                            <img src="img/portfolio/1.png" alt="">
+                            <img src="img/portfolio/1.jpg" alt="">
                         </div>
-                        <a href="img/portfolio/1.png" class="popup popup-image"></a>
+
                         <div class="portfolio_hover">
                             <div class="title">
-                                    <h3>Product Design</h3>
+                                    <a href="https://www.cvv.org.br/">  <h3>CVV</h3></a>
                             </div>
                         </div>
                     </div>
@@ -74,13 +71,13 @@
                 <div class="col-xl-7 col-md-7">
                     <div class="single_Portfolio">
                         <div class="portfolio_thumb">
-                            <img src="img/portfolio/2.png" alt="">
+                            <img src="img/portfolio/2.jpg" alt="">
                         </div>
-                        <a href="img/portfolio/2.png" class="popup popup-image"></a>
                         <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
+                          <div class="title">
+                                  <a href="https://psicoterapia.psc.br/blog/">  <h3>Blog do Artur Scarpato</h3></a>
+
+                          </div>
                         </div>
                     </div>
                 </div>

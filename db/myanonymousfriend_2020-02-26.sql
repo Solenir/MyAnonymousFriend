@@ -3,8 +3,8 @@
 -- *****************************************************
 
 CREATE DATABASE chat
-DEFAULT CHARACTER SET utf8
-DEFAULT COLLATE utf8_general_ci;
+DEFAULT CHARACTER SET utf8mb4
+DEFAULT COLLATE utf8mb4_general_ci;
 
 
 USE chat;
