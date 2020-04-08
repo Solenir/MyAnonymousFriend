@@ -34,13 +34,22 @@
 
     <!-- header-start -->
     <?php
-    $login = (isset($_COOKIE['Login'])) ? ($_COOKIE['Login']) : '';
-    $senha = (isset($_COOKIE['Senha'])) ? ($_COOKIE['Senha']) : '';
-    $lembrete = (isset($_COOKIE['Lembrete'])) ?($_COOKIE['Lembrete']) : '';
-    $checked = ($lembrete == 'SIM') ? 'checked' : '';
-    require_once("topoPreLogin.php");
+    if(!isset($_SESSION)){
+        session_start();
+    }
 
+    if (isset($_SESSION['logado'])){
+        $var = $_SESSION['ID_Usuario'];
+        require_once('topoPosLogin.php');
+    } else {
+        require_once('topoPreLogin.php');
+
+    }
     ?>
+
+
+
+
     <!-- slider_area_start -->
     <div class="slider_area">
         <div class="single_slider  d-flex align-items-center slider_bg_1">
@@ -131,8 +140,45 @@
         </div>
     </div>
 
+
     <!--/ service_area  -->
 
+
+        <!-- service_area  -->
+        <div class="service_area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="section_title text-center mb-65">
+                            <span>MY ANONYMOUS FRIEND</span>
+                            </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-4 col-md-4">
+                        <div class="single_service text-center">
+
+                            <h3>Gratuito</h3>
+                            <p>Cadastre-se e use de forma gratuita.<br><br><br><br></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4">
+                        <div class="single_service text-center">
+
+                            <h3>Desabafe!</h3>
+                            <p>Encontre pessoas para compartilhar os seus maiores problemas e sem se preocupar em revelar sua identidade!<br><br></p>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-md-4">
+                        <div class="single_service text-center">
+
+                            <h3>Ajude outras pessoas</h3>
+                            <p>Ajude outra pessoas conversando com elas, ouvindo elas. Sua atenção e os seus conselhos podem tornar o dia de outra pessoa bem melhor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <div class="video_area">
             <div class="container">
