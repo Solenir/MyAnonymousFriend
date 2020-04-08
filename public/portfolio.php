@@ -43,7 +43,7 @@
             <div class="row">
                 <div class="col-xl-12">
                     <div class="bradcam_text text-center">
-                        <h3>Portfolio</h3>
+                        <h3>Blogs Relacionados</h3>
                     </div>
                 </div>
             </div>
@@ -81,15 +81,17 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-6 col-lg-4">
+                <div class="col-xl-6 col-md-6">
                     <div class="single_Portfolio">
                         <div class="portfolio_thumb">
-                            <img src="img/portfolio/3.png" alt="">
+                            <img src="img/portfolio/3.jpg" alt="">
                         </div>
-                        <a href="img/portfolio/3.png" class="popup popup-image"></a>
+
                         <div class="portfolio_hover">
                             <div class="title">
-                                    <h3>Product Design</h3>
+
+                                    <a href="https://saude.abril.com.br/tudo-sobre/ansiedade/">  <h3>Tudo sobre Ansiedade</h3></a>
+
                             </div>
                         </div>
                     </div>
@@ -97,112 +99,32 @@
                 <div class="col-xl-4 col-md-6 col-lg-4">
                     <div class="single_Portfolio">
                         <div class="portfolio_thumb">
-                            <img src="img/portfolio/4.png" alt="">
+                            <img src="img/portfolio/4.jpg" alt="">
                         </div>
-                        <a href="img/portfolio/4.png" class="popup popup-image"></a>
+                        <a href="img/portfolio/4.jpg" class="popup popup-image"></a>
                         <div class="portfolio_hover">
                             <div class="title">
-                                    <h3>Product Design</h3>
+
+                                    <a href="https://www.vittude.com/blog/">  <h3>Blog Vittude</h3></a>
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-xl-4 col-md-12 col-lg-4">
-                    <div class="single_Portfolio">
-                        <div class="portfolio_thumb">
-                            <img src="img/portfolio/5.png" alt="">
-                        </div>
-                        <a href="img/portfolio/5.png" class="popup popup-image"></a>
-                        <div class="portfolio_hover">
-                            <div class="title">
-                                    <h3>Product Design</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="more_portfolio text-center">
-                        <a class="line_btn" href="#">More Folio</a>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
-    <!--/ portfolio_image_area  -->
-    <!-- testimonial_area  -->
-    <div class="testimonial_area ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="testmonial_active owl-carousel">
-                            <div class="single_carousel">
-                                    <div class="single_testmonial text-center">
-                                            <div class="quote">
-                                                <img src="img/testmonial/quote.svg" alt="">
-                                            </div>
-                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
-                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                            <div class="testmonial_author">
-                                                <div class="thumb">
-                                                        <img src="img/testmonial/thumb.png" alt="">
-                                                </div>
-                                                <h3>Robert Thomson</h3>
-                                                <span>Business Owner</span>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="single_carousel">
-                                    <div class="single_testmonial text-center">
-                                            <div class="quote">
-                                                <img src="img/testmonial/quote.svg" alt="">
-                                            </div>
-                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
-                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                            <div class="testmonial_author">
-                                                <div class="thumb">
-                                                        <img src="img/testmonial/thumb.png" alt="">
-                                                </div>
-                                                <h3>Robert Thomson</h3>
-                                                <span>Business Owner</span>
-                                            </div>
-                                        </div>
-                            </div>
-                            <div class="single_carousel">
-                                    <div class="single_testmonial text-center">
-                                            <div class="quote">
-                                                <img src="img/testmonial/quote.svg" alt="">
-                                            </div>
-                                            <p>Donec imperdiet congue orci consequat mattis. Donec rutrum porttitor <br>
-                                                    sollicitudin. Pellentesque id dolor tempor sapien feugiat ultrices nec sed neque.  <br>
-                                                    Fusce ac mattis nulla. Morbi eget ornare dui. </p>
-                                            <div class="testmonial_author">
-                                                <div class="thumb">
-                                                        <img src="img/testmonial/thumb.png" alt="">
-                                                </div>
-                                                <h3>Robert Thomson</h3>
-                                                <span>Business Owner</span>
-                                            </div>
-                                        </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- /testimonial_area  -->
 
     <div class="discuss_projects">
         <div class="container">
             <div class="row">
                 <div class="col-xl-12">
                     <div class="project_text text-center">
-                        <h3>Let’s discuss for a project</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor <br> incididunt ut labore et dolore magna aliqua.</p>
-                        <a class="boxed-btn3" href="#">Start Talking</a>
+                        <h3>Vamos conversar!</h3>
+                        <p>No My Anonymous Friend sua conversa é anônima e não fica salva em lugar algum!</p>
+                        <a class="boxed-btn3" href="login.php">Comece a Conversar</a>
                     </div>
                 </div>
             </div>

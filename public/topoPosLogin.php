@@ -16,20 +16,8 @@
                                 <ul id="navigation">
                                     <li><a class="active" href="index.php">Início</a></li>
                                     <li><a href="about.php">Sobre</a></li>
-                                    <li><a href="#">Blogs Relacionados <i class="ti-angle-down"></i></a>
-                                        <ul class="submenu">
-                                            <li><a href="https://www.cvv.org.br/">CVV</a></li>
-        <li><a href="https://psicoterapia.psc.br/blog/">Artur Scarpato</a></li>
-                                            <li><a href="https://saude.abril.com.br/tudo-sobre/ansiedade/">Tudo sobre ansiedade</a></li>
-        <li><a href="https://www.vittude.com/blog/">Vittude</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="#">Parceiros<i class="ti-angle-down"></i></a>
-                                        <ul class="submenu">
-                                             <li><a href="portfolio.php">Sites</a></li>
-                                             <li><a href="elements.php">Elementos</a></li>
-                                        </ul>
-                                    </li>
+
+                                    <li><a href="portfolio.php">Parceiros</a> </li>
                                     <li><a href="contact.php">Contato</a></li>
                                 </ul>
                             </nav>

@@ -30,11 +30,8 @@
 <body>
   <!-- header-start -->
   <?php
-  $login = (isset($_COOKIE['Login'])) ? ($_COOKIE['Login']) : '';
-  $senha = (isset($_COOKIE['Senha'])) ? ($_COOKIE['Senha']) : '';
-  $lembrete = (isset($_COOKIE['Lembrete'])) ?($_COOKIE['Lembrete']) : '';
-  $checked = ($lembrete == 'SIM') ? 'checked' : '';
-  require_once("topoPreLogin.php");
+
+  require_once("topoPosLogin.php");
 
   ?>
         <!-- header-end -->
@@ -170,7 +167,7 @@
                     <div class="project_text text-center">
                         <h3>Vamos conversar!</h3>
                         <p>No My Anonymous Friend sua conversa é anônima e não fica salva em lugar algum!</p>
-                        <a class="boxed-btn3" href="#">Comece a conversar</a>
+                        <a class="boxed-btn3" href="login.php">Comece a conversar</a>
                     </div>
                 </div>
             </div>
