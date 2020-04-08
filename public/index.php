@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+    
+    <link rel="stylesheet" href="css/balao.css">
+    
 </head>
 
 <body>
@@ -92,6 +95,35 @@
                     </div>
                 </div>
             </div>
+            
+            <div class="row">
+			<div class="col-xl-4 col-md-4">
+				<div class="box">
+				<div class="balao"><div class="aspa">”</div><div class="frase">Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... </div></div>
+				<div class="balao2"><div class="triangulo-para-cima"></div></div>
+				<div class="balao3">Fulana de Tal</div>
+				</div>
+			</div>
+
+				<div class="col-xl-4 col-md-4">
+				<div class="box">
+				<div class="balao"><div class="aspa">”</div><div class="frase">Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... </div></div>
+				<div class="balao2"><div class="triangulo-para-cima"></div></div>
+				<div class="balao3">Fulana de Tal</div>
+				</div>
+			</div>
+
+
+				<div class="col-xl-4 col-md-4">
+				<div class="box">
+				<div class="balao"><div class="aspa">”</div><div class="frase">Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... </div></div>
+				<div class="balao2"><div class="triangulo-para-cima"></div></div>
+				<div class="balao3">Fulana de Tal</div>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+            
             <div class="row">
                 <div class="col-xl-4 col-md-4">
                     <div class="single_service text-center">
