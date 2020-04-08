@@ -60,7 +60,7 @@ if(!isset($_SESSION['user_id']))
                           <div class="col-sm d-none d-lg-block">
                               <div class="Appointment">
                                   <div class="book_btn d-none d-lg-block">
-                                      <a  href="chat.php">Postagens</a>
+                                      <a  href="index3.php">Postagens</a>
                                   </div>
                               </div>
                           </div>
