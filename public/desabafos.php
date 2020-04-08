@@ -4,7 +4,7 @@ include('database_connection.php');
 
 session_start();
 
-$query = "SELECT * FROM desabafo LEFT JOIN login ON desabafo.user_id = login.user_id; ORDER BY desabafo_id DESC LIMIT 10";
+$query = "SELECT * FROM desabafo LEFT JOIN login ON desabafo.user_id = login.user_id ORDER BY desabafo_id DESC LIMIT 10";
 	$statement = $connect->prepare($query);
 	$statement->execute();
 	$result = $statement->fetchAll();
