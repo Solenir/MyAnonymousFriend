@@ -100,7 +100,7 @@ if(!isset($_SESSION['user_id']))
               <div class="row">
                   <div class="col-xl-12">
                       <div class="bradcam_text text-center">
-                          <h3>Chat My Anonymous Friend</h3>
+                          <h3>Mural de Desabafo</h3>
                       </div>
                   </div>
               </div>
