@@ -9,6 +9,13 @@ DEFAULT COLLATE utf8mb4_general_ci;
 
 USE chat;
 
+CREATE TABLE `desabafo` (
+  `desabafo_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `desabafo_texto` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
 --
 -- Table structure for table `chat_message`
 --
@@ -48,6 +55,12 @@ CREATE TABLE `login_details` (
 --
 -- Indexes for dumped tables
 --
+
+ALTER TABLE `desabafo`
+  ADD PRIMARY KEY (`desabafo_id`);
+
+ALTER TABLE `desabafo`
+  MODIFY `desabafo_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Indexes for table `chat_message`
