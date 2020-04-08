@@ -37,18 +37,11 @@
 
     <!-- header-start -->
     <?php
-    if(!isset($_SESSION)){
-        session_start();
-    }
 
-    if (isset($_SESSION['logado'])){
-        $var = $_SESSION['ID_Usuario'];
         require_once('topoPosLogin.php');
-    } else {
-        require_once('topoPreLogin.php');
 
-    }
     ?>
+
 
 
 

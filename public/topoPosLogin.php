@@ -38,7 +38,7 @@
                     <div class="col-sm d-none d-lg-block">
                         <div class="Appointment">
                             <div class="book_btn d-none d-lg-block">
-                                <a  href="chat.php">Chat</a>
+                                <a  href="login.php">Chat</a>
                             </div>
                         </div>
                     </div>

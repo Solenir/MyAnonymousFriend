@@ -2,45 +2,89 @@
 -- CRIACAO DO BANCO DE DADOS
 -- *****************************************************
 
-CREATE DATABASE DB_myanonymousfriend
+CREATE DATABASE chat
 DEFAULT CHARACTER SET utf8
 DEFAULT COLLATE utf8_general_ci;
 
 
-USE DB_myanonymousfriend;
+USE chat;
 
--- *****************************************************
--- Tabela..........: USUARIO
--- Elemento do DER.: Entidade Usuario
--- *****************************************************
-CREATE TABLE IF NOT EXISTS USUARIO(
-  ID_Usuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  Nome VARCHAR(50) NOT NULL,
-  Login VARCHAR(40) NOT NULL UNIQUE KEY,
-  Senha VARCHAR(62) NOT NULL,
-  logado BOOLEAN NOT NULL DEFAULT FALSE
-)ENGINE = INNODB;
+--
+-- Table structure for table `chat_message`
+--
 
+CREATE TABLE `chat_message` (
+  `chat_message_id` int(11) NOT NULL,
+  `to_user_id` int(11) NOT NULL,
+  `from_user_id` int(11) NOT NULL,
+  `chat_message` text NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `status` int(1) NOT NULL
+) ENGINE=InnoDB;
 
--- *****************************************************
--- Tabela..........: PUBLICAÇÃO
--- Elemento do DER.: Entidade Publicação
--- *****************************************************
-CREATE TABLE IF NOT EXISTS PUBLICACAO (
-  ID_Publicacao INT NOT NULL AUTO_INCREMENT PRIMARY KEY,  
-  Descricao TEXT
-)ENGINE = INNODB;
+--
+-- Table structure for table `login`
+--
 
--- *****************************************************
--- Tabela..........: MENSAGEM
--- Elemento do DER.: Entidade Mensagem
--- *****************************************************
-CREATE TABLE IF NOT EXISTS MENSAGEM (
-  ID_Mensagem INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  idRemetente INT NOT NULL,
-  idDestinatario INT NOT NULL,
-  Texto TEXT,
-  HoraMensagem DATETIME,
-  FOREIGN KEY (idRemetente) REFERENCES USUARIO(ID_Usuario),
-  FOREIGN KEY (idDestinatario) REFERENCES USUARIO(ID_Usuario)
-)ENGINE = InnoDB;
+CREATE TABLE `login` (
+  `user_id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login_details`
+--
+
+CREATE TABLE `login_details` (
+  `login_details_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `last_activity` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `is_type` enum('no','yes') NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `chat_message`
+--
+ALTER TABLE `chat_message`
+  ADD PRIMARY KEY (`chat_message_id`);
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `login_details`
+--
+ALTER TABLE `login_details`
+  ADD PRIMARY KEY (`login_details_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `chat_message`
+--
+ALTER TABLE `chat_message`
+  MODIFY `chat_message_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `login_details`
+--
+ALTER TABLE `login_details`
+  MODIFY `login_details_id` int(11) NOT NULL AUTO_INCREMENT;
