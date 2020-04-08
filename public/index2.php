@@ -56,7 +56,7 @@ if(!isset($_SESSION['user_id']))
                                   </nav>
                               </div>
                           </div>
-                          
+
                           <div class="col-sm d-none d-lg-block">
                               <div class="Appointment">
                                   <div class="book_btn d-none d-lg-block">
@@ -162,7 +162,7 @@ if(!isset($_SESSION['user_id']))
 
 </style>
 
-<div id="group_chat_dialog" title="Group Chat Window">
+<div id="group_chat_dialog" title="Chat em grupo">
  <div id="group_chat_history" style="height:400px; border:1px solid #ccc; overflow-y: scroll; margin-bottom:24px; padding:16px;">
 
  </div>

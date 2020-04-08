@@ -189,8 +189,7 @@
                     <div class="col-xl-12">
                         <div class="section_title text-center">
                             <h3>Está passando por um momento ansioso? Veja o vídeo abaixo e relaxe!</h3>
-                            <iframe width="960" height="480" src="https://www.youtube.com/embed/cizpXqVzBjw?autoplay=1&rel=0&modestbranding=1&theme=light&showinfo=0&loop=1&iv_load_policy=3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
+                            <iframe width="960" height="480" src="https://www.youtube.com/embed/cizpXqVzBjw" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                        </div>
                     </div>
                 </div>
             </div>
