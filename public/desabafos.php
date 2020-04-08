@@ -13,7 +13,7 @@ $query = "SELECT * FROM desabafo LEFT JOIN login ON desabafo.user_id = login.use
 	
 	foreach($result as $row)
 	{
-		$desabafos = "<div class=\"desabafo\"><div style=\"display: block;\"><span style=\"color: #000!important; margin: 0; padding: 0; font-weight: bold;\">".$row['username']."</span> <span style=\"font-size: 11.9px; font-style: italic; float: right; color: #000!important; margin: 0; padding: 0;\">".$row['timestamp']."</span></div>". $row['desabafo_texto']."</div>" . $desabafos;
+		$desabafos = $desabafos . "<div class=\"desabafo\"><div style=\"display: block;\"><span style=\"color: #000!important; margin: 0; padding: 0; font-weight: bold;\">".$row['username']."</span> <span style=\"font-size: 11.9px; font-style: italic; float: right; color: #000!important; margin: 0; padding: 0;\">".$row['timestamp']."</span></div>". $row['desabafo_texto']."</div>";
 	}
 
 	echo $desabafos;
