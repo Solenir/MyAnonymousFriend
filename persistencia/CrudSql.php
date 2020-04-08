@@ -24,7 +24,7 @@ class CrudSql
 
     public function inserirNovoUsuario()
     {
-        return "INSERT INTO USUARIO (Nome,Login,Senha) VALUES (?, ?, ?, ?)";
+        return "INSERT INTO USUARIO (Nome,Login,Senha,Logado) VALUES (?, ?, ?, ?)";
     }
 
     public function autenticarUsuario()

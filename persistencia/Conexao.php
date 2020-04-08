@@ -15,7 +15,7 @@ class Conexao
     {
         # Informações sobre o banco de dados:
         $host = "localhost";
-        $nome = "db_myanonymousfriend";
+        $nome = "DB_myanonymousfriend";
         $usuario = "root";
         $senha = "";
         $driver = "mysql";
@@ -28,8 +28,7 @@ class Conexao
             self::$db = new PDO("$driver:host=$host; dbname=$nome",$usuario,$senha);
             # Garante que o PDO lance exceções durante erros.
             self::$db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            # Garante que os dados sejam armazenados com codificação UFT-8.
-            self::$db->exec('SET NAMES utf8');
+
         }
         catch (PDOException $e)
         {

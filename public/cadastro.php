@@ -53,10 +53,7 @@
                         data : request,
 
                         success: function(data, textStatus, jqXHR) {
-
-                          $('.alerta').html(data);
-
-                            //window.location.href = "index.php";
+                          window.location.href = "index.php";
 
                         },
                         error: function (jqXHR, textStatus, errorThrown) {

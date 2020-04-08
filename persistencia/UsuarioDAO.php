@@ -30,8 +30,9 @@ class UsuarioDAO {
     $stmt = Conexao::getInstance()->prepare(CrudSql::getInstance()->verificarCadastro());
     $stmt->bindValue(1,$usuario->getLogin());
     $stmt->execute();
-    
+
     $linha = $stmt->fetch(PDO::FETCH_ASSOC);
+   
     if ($linha > 0){
       return false;
     }
@@ -41,6 +42,8 @@ class UsuarioDAO {
     $stmt->bindValue(1,$usuario->getNome());
     $stmt->bindValue(2, $usuario->getLogin());
     $stmt->bindValue(3,Criptografia::hash($usuario->getSenha()));
+    $stmt->bindValue(4,True);
+
     $stmt->execute();
     $_SESSION['ID_Usuario'] = $this->buscarIdUsuario($usuario->getLogin())['ID_Usuario'];
 
