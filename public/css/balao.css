@@ -17,8 +17,8 @@
 	display: block;
 }
 .triangulo-para-cima {
-	width: 0; 
-	height: 0; 
+	width: 0;
+	height: 0;
 	border-left: 0px solid transparent;
 	border-right: 25px solid transparent;
 	border-top: 25px solid rgb(24, 74, 110);
@@ -40,4 +40,9 @@
 	color: #fff;
 	display: block;
 	position: relative;
+}
+
+.service_area {
+  padding-top: 120px;
+  padding-bottom: 0px;
 }

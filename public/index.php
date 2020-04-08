@@ -25,9 +25,9 @@
     <link rel="stylesheet" href="css/slicknav.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/responsive.css"> -->
-    
+
     <link rel="stylesheet" href="css/balao.css">
-    
+
 </head>
 
 <body>
@@ -95,35 +95,8 @@
                     </div>
                 </div>
             </div>
-            
-            <div class="row">
-			<div class="col-xl-4 col-md-4">
-				<div class="box">
-				<div class="balao"><div class="aspa">”</div><div class="frase">Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... </div></div>
-				<div class="balao2"><div class="triangulo-para-cima"></div></div>
-				<div class="balao3">Fulana de Tal</div>
-				</div>
-			</div>
-
-				<div class="col-xl-4 col-md-4">
-				<div class="box">
-				<div class="balao"><div class="aspa">”</div><div class="frase">Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... </div></div>
-				<div class="balao2"><div class="triangulo-para-cima"></div></div>
-				<div class="balao3">Fulana de Tal</div>
-				</div>
-			</div>
 
 
-				<div class="col-xl-4 col-md-4">
-				<div class="box">
-				<div class="balao"><div class="aspa">”</div><div class="frase">Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... Frase... </div></div>
-				<div class="balao2"><div class="triangulo-para-cima"></div></div>
-				<div class="balao3">Fulana de Tal</div>
-				</div>
-			</div>
-		</div>
-		<br><br><br>
-            
             <div class="row">
                 <div class="col-xl-4 col-md-4">
                     <div class="single_service text-center">
@@ -131,7 +104,7 @@
                             <img src="img/svg_icon/1.svg" alt="">
                         </div>
                         <h3>Gratuito</h3>
-                        <p>Cadastre-se e use de forma gratuita.<br><br><br><br></p>
+                        <p>Cadastre-se e use de forma gratuita e convere com alguém para desabafar.<br><br><br><br></p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-4">
@@ -187,28 +160,33 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xl-4 col-md-4">
-                        <div class="single_service text-center">
+          <div class="col-xl-4 col-md-4">
+            <div class="box">
+            <div class="balao"><div class="aspa">”</div><div class="frase">Seja honesto com você mesmo e não se engane sobre o que você sente. Coloque o peso que você está sentindo para fora e se liberte dos sentimentos ruins. É necessário expelir tudo o que nos faz mal e refletir sobre a vida. </div></div>
+            <div class="balao2"><div class="triangulo-para-cima"></div></div>
 
-                            <h3>Gratuito</h3>
-                            <p>Cadastre-se e use de forma gratuita.<br><br><br><br></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4">
-                        <div class="single_service text-center">
+            </div>
+          </div>
 
-                            <h3>Desabafe!</h3>
-                            <p>Encontre pessoas para compartilhar os seus maiores problemas e sem se preocupar em revelar sua identidade!<br><br></p>
-                        </div>
-                    </div>
-                    <div class="col-xl-4 col-md-4">
-                        <div class="single_service text-center">
+            <div class="col-xl-4 col-md-4">
+            <div class="box">
+            <div class="balao"><div class="aspa">”</div><div class="frase">Encontre algo que você gosta de fazer e faça! Busque o prazer pela vida, tenha mais amor-próprio, divirta-se mesmo sozinha e aprenda a lidar com a solidão. Você merece ser feliz, independentemente de ter a companhia de alguém. Pense antes de agir e controle sua ansiedade no dia a dia.</div></div>
+            <div class="balao2"><div class="triangulo-para-cima"></div></div>
 
-                            <h3>Ajude outras pessoas</h3>
-                            <p>Ajude outra pessoas conversando com elas, ouvindo elas. Sua atenção e os seus conselhos podem tornar o dia de outra pessoa bem melhor.</p>
-                        </div>
-                    </div>
-                </div>
+            </div>
+          </div>
+
+
+            <div class="col-xl-4 col-md-4">
+            <div class="box">
+            <div class="balao"><div class="aspa">”</div><div class="frase">Se desconecte um pouco deste universo e reflita um pouco sobre você. Se ame em primeiro lugar, tenha calma para agir e permita-se deixar tudo de lado às vezes, para curtir os seus momentos sozinha. Enxergue o seu interior e respire fundo! </div></div>
+            <div class="balao2"><div class="triangulo-para-cima"></div></div>
+
+            </div>
+          </div>
+        </div>
+        <br><br><br>
+
             </div>
         </div>
 
@@ -238,37 +216,6 @@
                 </div>
             </div>
 
-
-    <div class="counter_area">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_counter text-center">
-                        <h3>
-                            <span class="counter" >520 </span><span>+</span>
-                        </h3>
-                        <p>Pessoas cadastradas</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_counter text-center">
-                        <h3>
-                            <span class="counter">244 </span>
-                        </h3>
-                        <p>Novos posts de desabafo</p>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-4">
-                    <div class="single_counter text-center">
-                        <h3>
-                            <span class="counter" >95 </span> <span></span>
-                        </h3>
-                        <p>Estão querendo conversar</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
 
     <!-- footer start -->
