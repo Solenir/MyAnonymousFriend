@@ -146,13 +146,6 @@ if(isset($_POST["register"]))
 
 
 
-
-
-
-
-
-
-
 			<div class="bradcam_area bradcam_bg_1">
 	        <div class="container">
 	            <div class="row">
@@ -172,7 +165,7 @@ if(isset($_POST["register"]))
   				<div class="panel-heading">Cadastro</div>
 				<div class="panel-body">
 					<form method="post">
-						<span class="text-danger"><?php echo $message; ?></span>
+						<span class="text-info"><?php echo $message; ?></span>
 						<div class="form-group">
 							<label>Digite o nome de usuário</label>
 							<input type="text" name="username" class="form-control" />
