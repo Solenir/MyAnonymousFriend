@@ -110,7 +110,7 @@ if(!isset($_SESSION['user_id']))
         <div class="container">
    <br />
 
-   
+
    <br />
    <div class="row">
     <div class="col-md-8 col-sm-6">
@@ -138,12 +138,12 @@ if(!isset($_SESSION['user_id']))
 
 	<div class="row">
 		<div class="col-md-12 col-sm-12" id="desabafos_content">
-			
+
 
 		</div>
 	</div>
   </div>
-	
+
     </body>
 </html>
 
@@ -186,13 +186,13 @@ desabafo.addEventListener("click", function() {
 	}
 	else {
 		alert("Escreva algo antes de publicar");
-	}	
-	
-	
-	
+	}
+
+
+
 });
 var desabafos_contetElement = document.querySelector("#desabafos_content");
-setInterval(function(){ 		
+setInterval(function(){
 
 		var xhttp = new XMLHttpRequest();
 
