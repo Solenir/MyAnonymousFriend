@@ -64,7 +64,7 @@ if(isset($_POST['login']))
 
 <html>
     <head>
-        <title>Chat My Anonymous Friend</title>
+        <title>My Anonymous Friend</title>
 				<link rel="stylesheet" href="css/sty.css">
 
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -102,7 +102,7 @@ if(isset($_POST['login']))
 			                            </nav>
 			                        </div>
 			                    </div>
-			             
+
 			                    <div class="col-sm d-none d-lg-block">
 			                        <div class="Appointment">
 			                            <div class="book_btn d-none d-lg-block">

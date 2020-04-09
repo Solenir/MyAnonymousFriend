@@ -76,7 +76,7 @@ if(isset($_POST["register"]))
 
 <html>
     <head>
-        <title>Chat My Anonymous Friend</title>
+        <title>My Anonymous Friend</title>
 
 
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
